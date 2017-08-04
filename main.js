@@ -28,14 +28,14 @@ function question1 () {
 function question2 () {
   // Answer:
   // Create an array to hold the "title" of each item with "price" 14<=x<=18
-  const midPrice = [];
+  // const midPrice = [];
   // Use loop to check each price and then an if to determine to push the title to new array
   for (let i = 0; i < data.length; i++) {
     if (data[i].price >= 14 && data[i].price <= 18) {
-      midPrice.push(data[i].title);
+      console.log(data[i].title);
     }
   }
-  console.log(midPrice);
+  // console.log(midPrice);
 }
 
 
