@@ -78,7 +78,7 @@ function question4 () {
   //console.log(woodenProducts)
 
   // REFACTORED Initialize and log answer4
-  let answer4 = `${woodenProducts[0]} is made of wood\n${woodenProducts[1]} is made of wood\n${woodenProducts[2]} is made of wood\n${woodenProducts[3]} is made of wood\n${woodenProducts[4]} is made of wood`
+  let answer4 = `${woodenProducts[0]} is made of wood\n${woodenProducts[1]} is made of wood\n${woodenProducts[2]} is made of wood\n${woodenProducts[3]} is made of wood\n${woodenProducts[4]} is made of wood`;
   console.log(answer4);
 }
 
@@ -88,43 +88,50 @@ function question4 () {
 //    Display the name, number of items and the items it is made of.
 
 //THIS WAS MY FIRST SOLUTION BUT I WANTED TO REFACTOR IT. SEE BELOW
-// function question5 () {
-//   // Answer:
-//   // Initialize an array to hold the products made of at least 8 different materials
-//   const complexProducts = [];
-//   // Each item in this array will be an object with three properties: title, # of materials, and materials - materials will be an array itself
-//   for (let i = 0; i < data.length; i++) {
-//       // If the data.materials.length >= 8, push the title, # of materials, and materials array into complexProducts
-//       if (data[i].materials.length >= 8) {
-//         complexProducts.push(data[i].title);
-//         complexProducts.push(data[i].materials.length);
-//         complexProducts.push(data[i].materials);
-//       }
-//     }
-//   // log complexProducts
-//   console.log(complexProducts);
-// }
-
-//REFACTORED
-
 function question5 () {
   // Answer:
   // Initialize an array to hold the products made of at least 8 different materials
-  const complexProducts = [];
+  // const complexProducts = [];
   // Each item in this array will be an object with three properties: title, # of materials, and materials - materials will be an array itself
   for (let i = 0; i < data.length; i++) {
       // If the data.materials.length >= 8, push the title, # of materials, and materials array into complexProducts
       if (data[i].materials.length >= 8) {
-        const newObject = {};
-        newObject.title = data[i].title;
-        newObject.number_of_materials = data[i].materials.length;
-        newObject.materials = data[i].materials;
-        complexProducts.push(newObject);
+        // complexProducts.push(data[i].title);
+        // complexProducts.push(data[i].materials.length);
+        // complexProducts.push(data[i].materials);
+        console.log(data[i].title + " has " + data[i].materials.length + " materials: " + data[i].materials);
+
       }
     }
   // log complexProducts
-  console.log(complexProducts);
+  // console.log(complexProducts);
 }
+
+//REFACTORED
+
+// function question5 () {
+//   // Answer:
+//   // Initialize an array to hold the products made of at least 8 different materials
+//   const complexProducts = [];
+//   let answer = "";
+//   // Each item in this array will be an object with three properties: title, # of materials, and materials - materials will be an array itself
+//   for (let i = 0; i < data.length; i++) {
+//       // If the data.materials.length >= 8, push the title, # of materials, and materials array into complexProducts
+//       if (data[i].materials.length >= 8) {
+//         const newObject = {};
+//         newObject.title = data[i].title;
+//         newObject.number_of_materials = data[i].materials.length;
+//         newObject.materials = data[i].materials;
+//         let compProd = "";
+//         compProd.innerHTML = `<p>${complexProducts[i]} has x</p>`
+//         answer.appendChild(compProd);
+//         // complexProducts.push(newObject);
+//       }
+//     }
+//   // log complexProducts
+//   console.log(complexProducts);
+//   console.log(answer);
+// }
 
 // 6: How many items were made by their sellers?
 // Answer:
